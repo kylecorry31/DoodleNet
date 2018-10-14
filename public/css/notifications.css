@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,600");
+@-webkit-keyframes slide {
+  80% {
+    top: 0;
+    visibility: visible; }
+  90% {
+    top: -1px;
+    visibility: visible; }
+  100% {
+    top: 0;
+    visibility: visible; } }
+@keyframes slide {
+  80% {
+    top: 0;
+    visibility: visible; }
+  90% {
+    top: -1px;
+    visibility: visible; }
+  100% {
+    top: 0;
+    visibility: visible; } }
+.notificationPane {
+  width: 34em;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 5px; }
+
+.notification {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.24), 0 3px 3px rgba(0, 0, 0, 0.345);
+  display: inline-block;
+  margin: auto;
+  border-radius: 4px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: -100vh;
+  visibility: hidden;
+  -webkit-animation: slide 0.5s forwards;
+  animation: slide 0.5s forwards;
+  background-color: #fff;
+  width: 34em;
+  min-height: 64px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: rgba(87, 79, 74, 0.87);
+  border: none; }
+
+.notification-title {
+  margin: 0;
+  padding: 8px 16px 0px 16px;
+  color: rgba(87, 79, 74, 0.87);
+  font-size: 16px;
+  font-weight: bold;
+  spacing: 5px; }
+
+.notification-desc {
+  margin: 0;
+  padding: 8px 16px 8px 16px;
+  font-size: 16px;
+  color: rgba(87, 79, 74, 0.8);
+  font-weight: lighter; }
+
+/*# sourceMappingURL=notifications.css.map */

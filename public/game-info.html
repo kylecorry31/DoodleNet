@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+      html, body {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/background.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: white;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+    <div id="content">
+
+      <a href="index.html">
+        <button type="button">Back</button>
+      </a>
+
+      <h1 id="title">Game: </h1>
+
+      <div id="loading">
+        <h1>LOADING...</h1>
+      </div>
+
+      <div class="game-btn" id="play-game">
+        <h2>Play</h2>
+      </div>
+
+      <div class="game-btn" id="edit-game">
+        <h2>Edit</h2>
+      </div>
+
+      <div class="game-btn" id="train-game">
+        <h2>Train</h2>
+      </div>
+
+      <div class="game-btn" id="delete-game">
+        <h2>Delete</h2>
+      </div>
+
+    </div>
+
+  </body>
+  <script src="js/game_api.js" charset="utf-8"></script>
+  <script src="js/game_info.js" charset="utf-8"></script>
+</html>

@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  padding: 8px;
+  background-color: #f2f2f2;
+  min-height: calc(100vh - 16px);
+}
+
+#content {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+}
+
+#content > h1, .edit-form > h2, .create-form > h2, #content > h2 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.game-btn {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all cubic-bezier(0.4, 0.0, 0.2, 1) 180ms;
+  padding: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 16px 16px;
+  filter: brightness(95%);
+}
+
+.game-btn:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  filter: brightness(100%);
+}
+
+#create-game {
+  background: #4caf50;
+  color: black;
+  margin-bottom: 32px;
+}
+
+.game {
+  background: #ffb300;
+  color: black;
+}
+
+#play-game, #submit, #mouse-btn, #cam-btn, #done-btn {
+  background: #4caf50;
+  color: black;
+}
+
+#edit-game, #train-game, #skip-btn, #example-btn {
+  background: #ffb300;
+  color: black;
+}
+
+#delete-game, #clear-btn, #cancel {
+  background: #f15d22;
+  color: white;
+}
+
+#loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #ffb300;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+#loading #loading-inner {
+  width: 100%;
+  padding: 16px;
+  max-width: 1000px;
+}
+
+#loading h1 {
+  color: black;
+  font-size: 4rem;
+  max-width: 1000px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+#app-title {
+  font-size: 48px;
+  text-align: center;
+}
+
+.deletable-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.training-delete {
+  background-color: #f15d22;
+  color: white;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-weight: 20px;
+}
+
+.label-delete {
+  background-color: #f15d22;
+  color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+  padding: 4px 10px;
+  display: block;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  margin-right: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all cubic-bezier(0.4, 0.0, 0.2, 1) 180ms;
+}
+
+.label-delete:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+}
+
+#add-label {
+  color: #ffb300;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+#add-label:hover {
+  filter: brightness(80%);
+}
+
+/* Taken from my a3 */
+button {
+  filter: brightness(95%);
+  background: #3f975e;
+  border: none;
+  padding: 12px 16px;
+  min-height: 24px;
+  min-width: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all cubic-bezier(0.4, 0.0, 0.2, 1) 180ms;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: white;
+  border: 2px solid #3f975e;
+}
+
+button:hover {
+  filter: brightness(100%);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+}
+
+button:focus {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24), inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+button:focus:hover {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+input[type=text] {
+  margin-bottom: 16px;
+  border: 1px solid gray;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 24px 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  margin-left: 16px;
+  margin-right: 16px;
+  width: calc(100% - 72px);
+}
+
+input[type=text]:focus {
+  background-color: white;
+  border: 1px solid #4caf50;
+}
+
+
+/* End taken from my a3 */
+
+
+#canvas-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+#results-container, #game-info {
+  text-align: center;
+  padding: 8px;
+}
+
+#training-data-heading {
+  text-align: center;
+}
+
+#training-data {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.training {
+  background: #eee;
+  border-radius: 4px;
+  margin: 8px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.training img {
+  width: 100px;
+  height: auto;
+}
+
+.training p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 0;
+  color: black;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#targeting-dot {
+  background: red;
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#label-select {
+  margin-bottom: 16px;
+  border: 1px solid gray;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 24px 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  width: calc(100% - 72px);
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+#label-select:focus {
+  background-color: white;
+  border: 1px solid #4caf50;
+}
+
+#credits, #tutorial {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 16px;
+}

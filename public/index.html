@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DoodleNet</title>
+    <link rel="stylesheet" href="/css/notifications.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+      html, body {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/background.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: white;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+    <div id="content">
+
+      <div id="loading">
+        <h1>Here's how to play</h1>
+      </div>
+
+      <h1 id="app-title">DoodleNet</h1>
+
+      <div class="game-btn" id="create-game">
+        <h2>Create a game</h2>
+      </div>
+
+      <h1>Choose a game</h1>
+      <div id="games">
+        <h2>Loading...</h2>
+      </div>
+    </div>
+
+    <a href="credits.html" id="credits">Open source software used</a>
+    <a href="#" id="tutorial">Show tutorial again</a>
+
+  </body>
+  <script src="js/notifications.js" charset="utf-8"></script>
+  <script src="js/game_api.js" charset="utf-8"></script>
+  <script src="js/game_select.js" charset="utf-8"></script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/notifications.css">
+    <style>
+      html, body {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/background.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: white;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+    <div id="content">
+
+      <h1 id="title">Create a game</h1>
+
+      <div class="create-form">
+        <h2>Name</h2>
+        <input type="text" id="game-name" placeholder="Game name">
+
+        <h2>Labels</h2>
+        <div id="game-labels">
+          <input type="text" class="game-label" placeholder="Label 1">
+          <input type="text" class="game-label" placeholder="Label 2">
+          <!-- Add a deletable label when clicked -->
+
+        </div>
+        <a href="#" id="add-label">+ Add another label</a>
+        <br>
+        <br>
+        <div class="game-btn" id="submit">
+          <h2>Submit</h2>
+        </div>
+        <div class="game-btn" id="cancel">
+          <h2>Cancel</h2>
+        </div>
+      </div>
+
+
+    </div>
+
+  </body>
+  <script src="js/notifications.js" charset="utf-8"></script>
+  <script src="js/game_api.js" charset="utf-8"></script>
+  <script src="js/create.js" charset="utf-8"></script>
+</html>

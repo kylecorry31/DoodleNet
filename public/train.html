@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/notifications.css">
+    <style>
+      html, body {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('img/background.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: white;
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+    <div id="content">
+      <h1 id="title">Training: </h1>
+
+      <h2>Aim for about 15-20 examples for each category.</h2>
+
+      <h2>Now drawing:</h2>
+      <select id="label-select"></select>
+
+      <div id="loading">
+        <h1>LOADING...</h1>
+      </div>
+
+      <div id="canvas-container">
+      </div>
+
+      <div id="results-container">
+        <h2 id="loss"></h2>
+        <h2 id="num-examples"></h2>
+      </div>
+
+      <div class="game-btn" id="clear-btn">
+        <h2>Clear</h2>
+      </div>
+      <div class="game-btn" id="example-btn">
+        <h2>Add example</h2>
+      </div>
+      <div class="game-btn" id="submit">
+        <h2>Train and save</h2>
+      </div>
+      <div class="game-btn" id="cancel">
+        <h2>Cancel</h2>
+      </div>
+
+      <div id="training-data">
+
+      </div>
+
+    </div>
+
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.0"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js" charset="utf-8"></script>
+  <script src="js/notifications.js" charset="utf-8"></script>
+  <script src="js/game_api.js" charset="utf-8"></script>
+  <script src="js/nn.js" charset="utf-8"></script>
+  <script src="js/train.js" charset="utf-8"></script>
+</html>
